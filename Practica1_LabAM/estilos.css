@@ -1,0 +1,11 @@
+button{
+    background: rgb(19, 36, 34);
+    background-color: transparent;
+    border-radius: 10%;
+    color: white;
+    border-color: white;
+}
+
+body{
+    background-color: rgb(19, 36, 34);
+}
