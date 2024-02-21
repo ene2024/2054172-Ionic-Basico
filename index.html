@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
 <body>
-    <div class="campo1">
-        <label for="usuario">Usuario <input type="text" name="" id="texto"></label>
-        <label for="contraseña">Password <input type="text" name="contra" id=""></label>
-    </div>
-    <div class="botones">
-        <button onclick="login()">Login</button>
-        <button>Registrarme</button>
-    </div>
+    <ion-header>
+        <ion-toolbar>
+          <ion-title>Presupuesto</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+            <ion-input id="tipo" label="Tipo de gasto" label-placement="floating" fill="solid" placeholder="Ingrese tipo"></ion-input>
 
-    <div id="aviso">
-        Login correcto
-    </div>
+            <br />
+
+            <ion-input id="monto" label="Monto" label-placement="floating" fill="outline" placeholder="Ingrese monto"></ion-input>
+            <ion-button onclick="agregar()">Agregar</ion-button> 
+            <section id="ticket">
+                <h2>======TICKET======</h2>
+        
+            </section>
+    </ion-content>
 
 </body>
 
 <script src="js.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 
 </html>
