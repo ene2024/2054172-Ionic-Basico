@@ -1,10 +1,10 @@
-<ion-list>
-  <ion-item *ngFor="let producto of productos">
-    <ion-label>
-      <h2>{{ producto.title }}</h2>
-      <p>Price: {{ producto.price }}</p>
-      <p>Description: {{ producto.desciption }}</p>
-      <p>Category: {{ producto.category }}</p>
-    </ion-label>
-  </ion-item>
-</ion-list>
+
+<router-outlet></router-outlet>
+
+<ion-card *ngFor="let producto of productos">
+    <ion-card-title>{{producto.title}}</ion-card-title>
+    <ion-card-content>
+      
+      <a [routerLink]="['/productoDetalle', producto.id]">Ir a Detalle</a>
+    </ion-card-content>
+  </ion-card>

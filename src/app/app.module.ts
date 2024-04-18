@@ -8,8 +8,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ProductosComponent } from './productos/productos.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProductosComponent, ProductoDetalleComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
