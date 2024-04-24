@@ -1,4 +1,4 @@
-<ion-list>
+<!--<ion-list>
   <ion-item-sliding *ngFor="let alumno of alumnos">
     <ion-item>{{alumno}}</ion-item>
     <ion-item-options side="start"> 
@@ -16,4 +16,29 @@
     </ion-item-options>
 </ion-item-sliding>
 </ion-list>
+-->
 
+<form #alumnosForm="ngForm" (ngSubmit)="agregarAlumno()">
+  <ion-label>Nombre alumno: {{alumno.nombre}}</ion-label>
+  <ion-input required="true" [(ngModel)]="alumno.nombre" placeholder="Ejemplo: Dios" name="nombre" mode="md" fill="outline"></ion-input>
+  <ion-label>
+     <ion-checkbox [(ngModel)]="alumno.presente" name="presente" required="true"></ion-checkbox>Presente
+  </ion-label>
+  <div>
+    <ion-button type="submit" [disabled]="alumnosForm.invalid">Agregar</ion-button>
+  </div>
+</form>
+
+<ion-card>
+  <ion-list *ngFor="let i of alumnos">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        {{i.nombre}}
+      </ion-item>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-card>

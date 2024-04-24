@@ -4,14 +4,14 @@ import { ProductosComponent } from './productos/productos.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 
 const routes: Routes = [
-  {
+  /*{
     path: '',
     component: ProductosComponent
   },
   {
     path: 'productoDetalle/:id',
     component: ProductoDetalleComponent
-  },
+  },*/
 ];
 
 @NgModule({

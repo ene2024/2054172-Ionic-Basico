@@ -15,10 +15,10 @@ export class ProductoDetalleComponent  implements OnInit {
 
   ngOnInit() {
 
-    this.realizarConsulta(this.idProducto);
+    //this.realizarConsulta(this.idProducto);
   }
 
-  idProducto: string = this.ruta.snapshot.params['id'];
+  /*idProducto: string = this.ruta.snapshot.params['id'];
 
   producto: any = {};
 
@@ -26,6 +26,6 @@ export class ProductoDetalleComponent  implements OnInit {
     this.consulta.getProductoDetalle(this.idProducto).subscribe(res => {
       this.producto = res;
     })
-  }
+  }*/
 
 }
