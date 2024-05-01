@@ -1,3 +1,13 @@
 
-<ion-button (click)="tomarfoto()">Tomar foto</ion-button>
+<ion-button (click)="tomarfoto()" expand="block">
+    <ion-icon name="camera-outline"></ion-icon>
+</ion-button>
+
+<ion-grid>
+    <ion-row>
+        <ion-col size="4" offset="4" *ngFor="let foto of fotos, index as i">
+            <img [src]="foto.webViewPath" alt="">
+        </ion-col>
+    </ion-row>
+</ion-grid>
 
